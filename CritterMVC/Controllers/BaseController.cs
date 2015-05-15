@@ -29,6 +29,7 @@ namespace CritterMVC.Controllers
 
         protected override IAsyncResult BeginExecute(RequestContext requestContext, AsyncCallback callback, object state)
         {
+            
             if (requestContext.HttpContext.User.Identity.IsAuthenticated)
             {
                 var userName = requestContext.HttpContext.User.Identity.Name; // the logged users' name (taken from context)
