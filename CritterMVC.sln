@@ -13,9 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{0846B2BA-FE7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CritterMVC", "CritterMVC\CritterMVC.csproj", "{3A3EE553-7EA5-4B98-B49E-1F2B3BA0A99D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testis", "Testis", "{A18E5CBE-AC1B-4645-8748-DCC3364D9B3C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A18E5CBE-AC1B-4645-8748-DCC3364D9B3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testis1", "Testis1\Testis1.csproj", "{0F0E3835-F440-4A4D-A52D-9BD9FF939F3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Testis1\Tests.csproj", "{0F0E3835-F440-4A4D-A52D-9BD9FF939F3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
