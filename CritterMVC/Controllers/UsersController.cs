@@ -6,8 +6,8 @@ using System.Web.Mvc;
 
 namespace CritterMVC.Controllers
 {
-    public class UsersController : BaseController
-    {
+    //public class UsersController : BaseController
+    //{
      
-    }
+    //}
 }
