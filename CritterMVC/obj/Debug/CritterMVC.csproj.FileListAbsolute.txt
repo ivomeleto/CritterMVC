@@ -62,3 +62,10 @@ C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMV
 C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Glimpse.Core.dll
 C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Glimpse.EF6.dll
 C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Glimpse.Mvc5.dll
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Ninject.dll
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Ninject.Web.Common.dll
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Ninject.Web.Mvc.dll
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\WebActivatorEx.dll
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Ninject.xml
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Ninject.Web.Common.xml
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Ninject.Web.Mvc.xml
