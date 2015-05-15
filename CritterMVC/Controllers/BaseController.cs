@@ -33,6 +33,7 @@ namespace CritterMVC.Controllers
             {
                 var userName = requestContext.HttpContext.User.Identity.Name; // the logged users' name (taken from context)
                 var user = this.Data.Users.GetAll().FirstOrDefault(x => x.UserName == userName);
+                this.UserProfile = user;
             }
             return base.BeginExecute(requestContext, callback, state);
         }
