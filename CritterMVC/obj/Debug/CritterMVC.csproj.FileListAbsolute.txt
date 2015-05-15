@@ -57,3 +57,8 @@ c:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMV
 c:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 c:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\obj\Debug\CritterMVC.dll
 c:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\obj\Debug\CritterMVC.pdb
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Glimpse.Ado.dll
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Glimpse.AspNet.dll
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Glimpse.Core.dll
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Glimpse.EF6.dll
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Glimpse.Mvc5.dll
