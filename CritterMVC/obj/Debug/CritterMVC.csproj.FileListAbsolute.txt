@@ -69,3 +69,4 @@ C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMV
 C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Ninject.xml
 C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Ninject.Web.Common.xml
 C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Ninject.Web.Mvc.xml
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\System.Web.Mvc.Expressions.dll

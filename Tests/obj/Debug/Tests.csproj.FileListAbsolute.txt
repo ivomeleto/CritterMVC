@@ -1,2 +1,0 @@
-C:\Users\iivel_000.COMMANDCENTER\documents\visual studio 2013\Projects\CritterMVC\Testis1\obj\Debug\Testis1.exe
-C:\Users\iivel_000.COMMANDCENTER\documents\visual studio 2013\Projects\CritterMVC\Testis1\obj\Debug\Testis1.pdb
