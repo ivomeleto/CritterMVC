@@ -1,1 +1,20 @@
-﻿@model Critter.Models.User
+﻿@model CritterMVC.ViewModels.UserViewModel
+<h1>
+
+    @Model.UserName
+    <br/>
+    @Model.Email
+    <br/>
+    @Model.FullName
+    <br/>
+    @Model.Crits.Provider
+    <br/>
+</h1>
+
+    @*@foreach (var crit in Model.Crits)
+    {
+        <p>hello</p>
+    }*@
+    <br />
+    <img src="@Model.AvatarUrl" alt="Sorry no image for you..." />
+
