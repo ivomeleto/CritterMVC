@@ -1,13 +1,11 @@
 ﻿using System;
+using Critter.Data;
+using Critter.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
 using Owin;
-using CritterMVC.Models;
-using Critter.Data;
-using Critter.Models;
 
 namespace CritterMVC
 {

@@ -1,7 +1,8 @@
-﻿using Microsoft.Owin;
+﻿using CritterMVC;
+using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(CritterMVC.Startup))]
+[assembly: OwinStartup(typeof(Startup))]
 namespace CritterMVC
 {
     public partial class Startup

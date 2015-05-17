@@ -1,9 +1,5 @@
-﻿using Critter.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Critter.Data;
 
 namespace CritterMVC.Controllers
 {
@@ -14,9 +10,9 @@ namespace CritterMVC.Controllers
         {
         }
 
-        //public ActionResult Index(string username)
-        //{
-        //    return this.View();
-        //}
+        public ActionResult Index(string username)
+        {
+            return this.View();
+        }
     }
 }

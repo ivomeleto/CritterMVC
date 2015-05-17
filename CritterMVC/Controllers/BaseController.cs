@@ -1,11 +1,9 @@
-﻿using Critter.Data;
-using Critter.Models;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Critter.Data;
+using Critter.Models;
 
 namespace CritterMVC.Controllers
 {
