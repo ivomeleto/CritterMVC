@@ -13,5 +13,10 @@ namespace CritterMVC.Controllers
             :base(data)
         {
         }
+
+        //public ActionResult Index(string username)
+        //{
+        //    return this.View();
+        //}
     }
 }

@@ -30,14 +30,14 @@ namespace CritterMVC.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-            return this.RedirectToAction(x => x.Contact());
+            return this.View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            this.ViewBag.Message = "Your contact page.";
 
-            return View();
+            return this.View();
         }
     }
 }
