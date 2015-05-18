@@ -13,23 +13,23 @@
 <br />
 <br />
 <br/>
-<h4>All crits ever posted: @Model.PostedCrits.Count()</h4>
-<ol>
+<h4>All crits ever posted: </h4>
+<ul>
     @foreach (var crit in Model.PostedCrits)
     {
         <br/>
-        <li>@crit.Text</li>
+        <li><img src="@crit.Author.AvatarUrl" width="50" /> @crit.Text</li>
     }
-</ol>
+</ul>
 
-<h4>All crits ever received: @Model.ReceivedCrits.Count()</h4>
-<ol>
+<h4>All crits ever received: </h4>
+<ul>
     @foreach (var crit in Model.ReceivedCrits)
     {
-        <br />
-        <li>@crit.Text</li>
+        <br/>
+        <li><img src="@crit.Author.AvatarUrl" width="50"/> @crit.Text</li>
     }
-</ol>
+</ul>
 <br />
 <br />
 <br />

@@ -16,15 +16,15 @@ namespace CritterMVC.ViewModels
         public string Email { get; set; }
         public string AvatarUrl { get; set; }
 
-        public object FromModel(User user)
+        public UserViewModel FromModel(User user)
         {
             return new UserViewModel()
             {
                 UserName = user.UserName,
                 Email = user.Email,
                 AvatarUrl = user.AvatarUrl,
-                PostedCrits = user.PostedCrits.AsQueryable().Select(CritViewModel.ViewMidel),
-                ReceivedCrits =  user.ReceivedCrits.AsQueryable().Select(CritViewModel.ViewMidel)
+                PostedCrits = user.PostedCrits.AsQueryable().Select(CritViewModel.ViewModel),
+                ReceivedCrits =  user.ReceivedCrits.AsQueryable().Select(CritViewModel.ViewModel)
             };
         }
     }

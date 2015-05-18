@@ -13,11 +13,11 @@ namespace CritterMVC.ViewModels
 
         public int Id { get; set; }
         public string Text { get; set; }
-        public UserViewModel Author { get; set; }
+        public User Author { get; set; }
         public DateTime CreatedAt { get; set; }
 
 
-        public static Expression<Func<Crit,CritViewModel>>  ViewMidel  //TODO:get real familiar with the Expressions
+        public static Expression<Func<Crit,CritViewModel>>  ViewModel  //TODO:get real familiar with the Expressions
         {
             get
             {
@@ -25,7 +25,8 @@ namespace CritterMVC.ViewModels
                 {
                     Id = x.CritId,
                     Text = x.Text,
-                    CreatedAt = x.CreatedAt
+                    CreatedAt = x.CreatedAt,
+                    Author = (x.AuthorUser ?? new User())
                 };
             }
         }

@@ -26,10 +26,11 @@ namespace CritterMVC.Controllers
             {
                 return this.HttpNotFound("User does not exist! For real!");
             }
-
-            var userViewModel = new UserViewModel().FromModel(user);
             
+            var userViewModel = new UserViewModel().FromModel(user);
             return this.View(userViewModel);
+
+            
         }
     }
 }
