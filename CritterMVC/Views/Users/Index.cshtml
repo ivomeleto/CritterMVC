@@ -9,15 +9,24 @@
     <br/>
 
 </h1>
-<img src="@Model.AvatarUrl" alt="Sorry no image for you..."/>
+<img src="@Model.AvatarUrl" alt="Sorry no image for you..." width="200px"/>
 <br />
 <br />
 <br/>
-<h4>All crits ever posted:</h4>
+<h4>All crits ever posted: @Model.PostedCrits.Count()</h4>
 <ol>
-    @foreach (var crit in Model.Crits)
+    @foreach (var crit in Model.PostedCrits)
     {
         <br/>
+        <li>@crit.Text</li>
+    }
+</ol>
+
+<h4>All crits ever received: @Model.ReceivedCrits.Count()</h4>
+<ol>
+    @foreach (var crit in Model.ReceivedCrits)
+    {
+        <br />
         <li>@crit.Text</li>
     }
 </ol>
