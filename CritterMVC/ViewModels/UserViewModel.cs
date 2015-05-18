@@ -8,7 +8,7 @@ namespace CritterMVC.ViewModels
 {
     public class UserViewModel
     {
-        public ICollection<Crit> Crits { get; set; }
+        public IQueryable<CritViewModel> Crits { get; set; }
         public string Bio { get; set; }
         public string FullName { get; set; }
         public string UserName { get; set; }
@@ -22,7 +22,7 @@ namespace CritterMVC.ViewModels
                 UserName = user.UserName,
                 Email = user.Email,
                 AvatarUrl = user.AvatarUrl,
-                Crits = user.Crits
+                Crits = user.Crits.AsQueryable().Select(CritViewModel.ViewMidel)
             };
         }
     }

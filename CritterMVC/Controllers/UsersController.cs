@@ -21,7 +21,6 @@ namespace CritterMVC.Controllers
                 .GetAll()
                 .FirstOrDefault(x => x.UserName == username);
 
-            //TODO db realations one-to-many/many-to-many for crits and users needs to be fixed
 
             if (user == null)
             {
