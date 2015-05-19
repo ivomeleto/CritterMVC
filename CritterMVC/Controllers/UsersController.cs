@@ -18,7 +18,7 @@ namespace CritterMVC.Controllers
         public ActionResult Index(string username)
         {
             var user = this.Data.Users
-                .GetAll()
+                .All()
                 .FirstOrDefault(x => x.UserName == username);
 
 
@@ -26,8 +26,30 @@ namespace CritterMVC.Controllers
             {
                 return this.HttpNotFound("User does not exist! For real!");
             }
+
+            var userViewModel = new UserViewModel()
+            {
+                Id = user.Id,
+                UserName = user.UserName,
+                AvatarUrl = user.AvatarUrl,
+                PostedCrits = user.PostedCrits.Select(x => new CritViewModel()
+                {
+                    Id = x.CritId,
+                    Author = x.AuthorUser,
+                    Recipient = x.RecipientUser,
+                    CreatedAt = x.CreatedAt,
+                    Text = x.Text
+                }),
+                ReceivedCrits = user.ReceivedCrits.Select(x => new CritViewModel()
+                {
+                    Id = x.CritId,
+                    Author = x.AuthorUser,
+                    Recipient = x.RecipientUser,
+                    CreatedAt = x.CreatedAt,
+                    Text = x.Text
+                })
+            };
             
-            var userViewModel = new UserViewModel().FromModel(user);
             return this.View(userViewModel);
 
             

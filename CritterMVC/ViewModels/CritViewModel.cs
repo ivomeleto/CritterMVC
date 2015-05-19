@@ -14,21 +14,7 @@ namespace CritterMVC.ViewModels
         public int Id { get; set; }
         public string Text { get; set; }
         public User Author { get; set; }
+        public User Recipient { get; set; }
         public DateTime CreatedAt { get; set; }
-
-
-        public static Expression<Func<Crit,CritViewModel>>  ViewModel  //TODO:get real familiar with the Expressions
-        {
-            get
-            {
-                return x => new CritViewModel
-                {
-                    Id = x.CritId,
-                    Text = x.Text,
-                    CreatedAt = x.CreatedAt,
-                    Author = (x.AuthorUser ?? new User())
-                };
-            }
-        }
     }
 }

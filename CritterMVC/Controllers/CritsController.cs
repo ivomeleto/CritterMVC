@@ -1,5 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using Critter.Data;
+using CritterMVC.ViewModels;
 
 namespace CritterMVC.Controllers
 {
@@ -13,7 +15,17 @@ namespace CritterMVC.Controllers
         // GET: Crits
         public ActionResult Index()
         {
-            return View();
+            var crits = this.Data.Crit
+               .All();
+
+
+            if (crits == null)
+            {
+                return this.HttpNotFound("User does not exist! For real!");
+            }
+
+            var critViewModel = crits.AsQueryable();
+            return this.View();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Management.Instrumentation;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Critter.Data;
@@ -31,8 +32,13 @@ namespace CritterMVC.Controllers
             if (requestContext.HttpContext.User.Identity.IsAuthenticated)
             {
                 var userName = requestContext.HttpContext.User.Identity.Name; // the logged users' name (taken from context)
-                var user = this.Data.Users.GetAll().FirstOrDefault(x => x.UserName == userName);
+                var user = this.Data.Users.All().FirstOrDefault(x => x.UserName == userName);
                 this.UserProfile = user;
+            }
+            if (this.UserProfile == null)
+            {
+                //throw new InstanceNotFoundException("shit");
+                return base.BeginExecute(requestContext, callback, state);
             }
             return base.BeginExecute(requestContext, callback, state);
         }
