@@ -1,7 +1,9 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Web.Mvc;
 using Critter.Data;
 using CritterMVC.ViewModels;
+using Critter.Models;
 
 namespace CritterMVC.Controllers
 {
@@ -33,6 +35,25 @@ namespace CritterMVC.Controllers
 
             var critViewModel = crits.AsQueryable();
             return this.View(crits);
+        }
+
+        public ActionResult AddCrit()
+        {
+            return this.View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddCrit([Bind(Include = "Text")] Crit crit)
+        {
+            crit.AuthorUser = this.UserProfile;
+            crit.CreatedAt = DateTime.Now;
+            if (ModelState.IsValid)
+            {
+                this.Data.Crit.Add(crit);
+                this.Data.Crit.SaveChanges();
+            }
+            return this.View(crit);
         }
     }
 }

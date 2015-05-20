@@ -284,6 +284,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
+    <None Include="Views\Crits\AddCrit.cshtml" />
     <None Include="Views\Crits\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\CritViewModel.cshtml" />
   </ItemGroup>

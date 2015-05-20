@@ -23,10 +23,45 @@ textarea {
     max-width: 280px;
 }
 
+footer {
+    margin-left: 30%;
+}
+
+
 ul {
     list-style-type: none;
 }
 
 .avatar {
-    border: solid 3px gold
+    border: solid 3px gold;
+}
+
+.homeTitle {
+    margin-left: 20%;
+    margin-top: -10%;
+}
+
+.logo {
+    margin-left: 20%;
+    margin-top: -8%;
+}
+
+.leftLogo {
+    width: 100px;
+
+}
+
+.rightLogo {
+    width: 130px;
+    margin-bottom: 10%;
+    margin-left: 10%
+}
+
+.jumbotron {
+    margin: auto;
+    width: 80%;
+}
+
+#btn {
+    margin-left: 20%
 }
