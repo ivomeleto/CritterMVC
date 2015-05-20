@@ -10,6 +10,19 @@ namespace CritterMVC.ViewModels
 {
     public class UserViewModel
     {
+        public static Expression<Func<Crit, CritViewModel>> ViewModel
+        {
+            get
+            {
+                return x => new CritViewModel()
+                {
+                    Id = x.CritId,
+                    Author = x.AuthorUser,
+                    CreatedAt = x.CreatedAt,
+                    Text = x.Text
+                };
+            }
+        }
         public string Id { get; set; }
         public IEnumerable<CritViewModel> PostedCrits { get; set; }
         public IEnumerable<CritViewModel> ReceivedCrits { get; set; }

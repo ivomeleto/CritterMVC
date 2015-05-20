@@ -1,16 +1,12 @@
 ﻿@model CritterMVC.ViewModels.UserViewModel
 
 <h2> @Html.DisplayFor(x => x.UserName) </h2><br />
-<img src="@Model.AvatarUrl" alt="Sorry no image for you..." width="200"/><br /><br />
-<br />
+<img  src="@Model.AvatarUrl" alt="Sorry no image for you..." width="200"/><br/><br/>
+<br/>
 
 <h3>@Html.DisplayNameFor(x => x.PostedCrits): @Model.PostedCrits.Count()</h3>
 @Html.DisplayFor(x => x.PostedCrits)
 
-<br /><br />    
-
-<h3>@Html.DisplayNameFor(x => x.ReceivedCrits): @Model.ReceivedCrits.Count()</h3>
-@Html.DisplayFor(x => x.ReceivedCrits)  
 
 
 

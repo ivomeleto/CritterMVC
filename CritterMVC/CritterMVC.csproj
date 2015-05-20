@@ -302,11 +302,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SoloMVC\Critter.Data\Critter.Data.csproj">
+    <ProjectReference Include="..\Critter.Data\Critter.Data.csproj">
       <Project>{3b1f21fc-f9eb-4c5d-985b-afd1a7b140b3}</Project>
       <Name>Critter.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\SoloMVC\Critter.Models\Critter.Models.csproj">
+    <ProjectReference Include="..\Critter.Models\Critter.Models.csproj">
       <Project>{7720293c-d598-4626-983d-f8990fe236b7}</Project>
       <Name>Critter.Models</Name>
     </ProjectReference>

@@ -1,5 +1,6 @@
 ﻿@model  CritterMVC.ViewModels.CritViewModel
-  
-<img src="@Model.Author.AvatarUrl" width="50" /> : <strong>@Model.Text</strong>
-@*<p>Sent to @Model.Recipient.UserName at @Model.CreatedAt</p>*@
 
+<div>
+    <img class="avatar" src="@Model.Author.AvatarUrl" width="50" />  <strong>&nbsp;@Model.Text</strong>
+    <p class="SentAt"><strong>Sent at: &nbsp;</strong>@Model.CreatedAt</p>
+</div>

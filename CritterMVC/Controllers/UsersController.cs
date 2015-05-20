@@ -21,7 +21,6 @@ namespace CritterMVC.Controllers
                 .All()
                 .FirstOrDefault(x => x.UserName == username);
 
-
             if (user == null)
             {
                 return this.HttpNotFound("User does not exist! For real!");
@@ -32,22 +31,9 @@ namespace CritterMVC.Controllers
                 Id = user.Id,
                 UserName = user.UserName,
                 AvatarUrl = user.AvatarUrl,
-                PostedCrits = user.PostedCrits.Select(x => new CritViewModel()
-                {
-                    Id = x.CritId,
-                    Author = x.AuthorUser,
-                    Recipient = x.RecipientUser,
-                    CreatedAt = x.CreatedAt,
-                    Text = x.Text
-                }),
-                ReceivedCrits = user.ReceivedCrits.Select(x => new CritViewModel()
-                {
-                    Id = x.CritId,
-                    Author = x.AuthorUser,
-                    Recipient = x.RecipientUser,
-                    CreatedAt = x.CreatedAt,
-                    Text = x.Text
-                })
+                PostedCrits = user
+                    .PostedCrits
+                    .Select(x => CritViewModel.ToViewModel(x))
             };
             
             return this.View(userViewModel);

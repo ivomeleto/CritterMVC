@@ -26,3 +26,7 @@ textarea {
 ul {
     list-style-type: none;
 }
+
+.avatar {
+    border: solid 3px gold
+}

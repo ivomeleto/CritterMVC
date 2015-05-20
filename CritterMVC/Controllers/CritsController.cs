@@ -16,7 +16,14 @@ namespace CritterMVC.Controllers
         public ActionResult Index()
         {
             var crits = this.Data.Crit
-               .All();
+                .All().Select(x => new CritViewModel()
+                    {
+                        Id = x.CritId,
+                        Author = x.AuthorUser,
+                        Text = x.Text,
+                        CreatedAt = x.CreatedAt
+                    }
+                );
 
 
             if (crits == null)
@@ -25,7 +32,7 @@ namespace CritterMVC.Controllers
             }
 
             var critViewModel = crits.AsQueryable();
-            return this.View();
+            return this.View(crits);
         }
     }
 }

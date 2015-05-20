@@ -1,1 +1,18 @@
-﻿@model  CritterMVC.ViewModels.CritViewModel
+﻿@using CritterMVC.ViewModels
+@model  IQueryable<CritterMVC.ViewModels.CritViewModel>
+
+<br/><br/>
+<h2>All crits ever posted</h2>
+<br />
+
+
+@foreach (var crit in @Model)
+    {
+        <div class="crit">
+            <img class="avatar" src="@crit.Author.AvatarUrl" alt="No avatar" width="50" />
+
+            <strong>&nbsp;@crit.Text</strong>
+            <p class="SentAt"><strong>Posted at: &nbsp;</strong>@crit.CreatedAt</p>
+        </div>
+
+    }
