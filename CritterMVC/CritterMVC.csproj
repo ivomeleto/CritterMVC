@@ -287,6 +287,7 @@
     <None Include="Views\Crits\AddCrit.cshtml" />
     <None Include="Views\Crits\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\CritViewModel.cshtml" />
+    <None Include="Views\Manage\ChangeAvatar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

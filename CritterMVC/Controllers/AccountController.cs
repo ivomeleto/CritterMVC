@@ -70,6 +70,9 @@ namespace CritterMVC.Controllers
             {
                 return View(model);
             }
+            //var user = this.Data.Users.All().FirstOrDefault(x => x.UserName == model.Username);
+
+            //this.UserProfile.UserName = model.Username;
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true

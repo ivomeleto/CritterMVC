@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using Critter.Data;
 using CritterMVC.ViewModels;
 using Critter.Models;
+using System.Web.Routing;
 
 namespace CritterMVC.Controllers
 {
@@ -15,15 +16,23 @@ namespace CritterMVC.Controllers
         {
         }
 
+        //public ActionResult NoUserLogged()
+        //{
+        //    return RedirectToAction("Login", "Account");
+        //}
+
         public ActionResult Index(string username)
         {
+
             var user = this.Data.Users
                 .All()
                 .FirstOrDefault(x => x.UserName == username);
 
+
             if (user == null)
-            {
-                return this.HttpNotFound("User does not exist! For real!");
+            {   
+                
+                return RedirectToAction("Index", "Home");
             }
 
             var userViewModel = new UserViewModel()

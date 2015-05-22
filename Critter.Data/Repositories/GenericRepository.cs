@@ -43,9 +43,9 @@ namespace Critter.Data.Repositories
             SaveChanges();
         }
 
-        public void Update(int id, T item)
+        public void Update(string id, T item)
         {
-            var actor = this.GetById(id);
+            var entity = this.GetById(id);
             SaveChanges();
         }
 

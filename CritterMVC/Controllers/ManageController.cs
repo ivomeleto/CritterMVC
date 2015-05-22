@@ -6,16 +6,19 @@ using CritterMVC.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using Critter.Models;
+using Critter.Data;
 
 namespace CritterMVC.Controllers
 {
     [Authorize]
-    public class ManageController : Controller
+    public class ManageController : BaseController
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
-        public ManageController()
+        public ManageController(ICritData data)
+            : base(data)
         {
         }
 
@@ -211,12 +214,28 @@ namespace CritterMVC.Controllers
         }
 
         //
+
+        public ActionResult ChangeAvatar()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public ActionResult ChangeAvatar([Bind(Include = "AvatarUrl")] User model)
+        {
+            var user = this.UserProfile;
+            user.AvatarUrl = model.AvatarUrl;
+            this.Data.Users.Update(user.Id, user);
+
+            return RedirectToAction("Index", "Users");
+        }
+
         // GET: /Manage/ChangePassword
         public ActionResult ChangePassword()
         {
             return View();
         }
-
         //
         // POST: /Manage/ChangePassword
         [HttpPost]

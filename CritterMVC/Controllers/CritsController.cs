@@ -47,9 +47,9 @@ namespace CritterMVC.Controllers
         public ActionResult AddCrit([Bind(Include = "Text")] Crit crit)
         {
             crit.AuthorUser = this.UserProfile;
-            if (crit.AuthorUser == null)
+            if (this.UserProfile == null)
             {
-                //TODO redirect to login page
+                return RedirectToAction("Login", "Account");
             }
             crit.CreatedAt = DateTime.Now;
             if (ModelState.IsValid)
@@ -57,7 +57,7 @@ namespace CritterMVC.Controllers
                 this.Data.Crit.Add(crit);
                 this.Data.Crit.SaveChanges();
             }
-            return this.View(crit);
+            return RedirectToAction("Index", "Crits");
         }
     }
 }

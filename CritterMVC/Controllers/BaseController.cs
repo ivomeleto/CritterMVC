@@ -12,6 +12,11 @@ namespace CritterMVC.Controllers
     {
         private ICritData data;
         private User userProfile;  //possible performance problem (in a larger app)
+
+        protected BaseController()
+        {
+            
+        }
         protected BaseController(ICritData data)
         {
             this.Data = data;
