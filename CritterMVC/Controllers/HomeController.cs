@@ -1,5 +1,7 @@
 ﻿using System.Web.Mvc;
 using Critter.Data;
+using System;
+using System.Threading;
 
 namespace CritterMVC.Controllers
 {
@@ -32,6 +34,18 @@ namespace CritterMVC.Controllers
         {
             this.ViewBag.Message = "Your contact page.";
 
+            return this.View();
+        }
+
+        public ActionResult ServerTime()
+        {
+            Thread.Sleep(1000);
+            var time = DateTime.Now.ToString();
+            return this.Content(time);
+        }
+
+        public ActionResult AjaxTest()
+        {
             return this.View();
         }
     }

@@ -17,6 +17,7 @@ namespace CritterMVC.Controllers
         // GET: Crits
         public ActionResult Index()
         {
+            //TODO reverse crits order of appearance
             var crits = this.Data.Crit
                 .All().Select(x => new CritViewModel()
                     {
@@ -59,5 +60,7 @@ namespace CritterMVC.Controllers
             }
             return RedirectToAction("Index", "Crits");
         }
+
+       
     }
 }
