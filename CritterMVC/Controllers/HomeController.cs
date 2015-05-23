@@ -40,8 +40,8 @@ namespace CritterMVC.Controllers
         public ActionResult ServerTime()
         {
             Thread.Sleep(1000);
-            var time = DateTime.Now.ToString();
-            return this.Content(time);
+            
+            return this.Content("Holy shit ");
         }
 
         public ActionResult AjaxTest()
