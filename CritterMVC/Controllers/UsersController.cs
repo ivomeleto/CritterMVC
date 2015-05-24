@@ -40,6 +40,7 @@ namespace CritterMVC.Controllers
                 Id = user.Id,
                 UserName = user.UserName,
                 AvatarUrl = user.AvatarUrl,
+                Email = user.Email,
                 PostedCrits = user
                     .PostedCrits
                     .Select(x => CritViewModel.ToViewModel(x))

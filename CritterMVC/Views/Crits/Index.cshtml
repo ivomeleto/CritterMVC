@@ -3,13 +3,13 @@
 
 <br/><br/>
 <h2>All crits ever posted</h2>
-<br />
+<hr />
 
 
 @foreach (var crit in @Model)
     {
         <div class="crit">
-            <img class="avatar" src="@crit.Author.AvatarUrl" alt="No avatar" width="50" />
+            <a href="/Users/@crit.Author.UserName"><img class="avatar" src="@crit.Author.AvatarUrl" alt="No avatar" width="50" /></a>
 
             <strong>&nbsp;@crit.Text</strong>
             <p class="SentAt"><strong>Posted at: &nbsp;</strong>@crit.CreatedAt</p>

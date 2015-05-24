@@ -33,7 +33,8 @@ ul {
 }
 
 .avatar {
-    border: solid 3px gold;
+    border: solid 0px lightgray;
+    border-radius: 5px;
 }
 
 .homeTitle {
@@ -64,4 +65,16 @@ ul {
 
 #btn {
     margin-left: 20%
+}
+
+.crit {
+     border: 0px solid #888888;
+     background-color: lightgray;
+     border-radius: 8px;
+     box-shadow: 1px 1px 8px #888888;
+     /*border-bottom: 1px solid lightgray;*/
+}
+
+.crit:hover {
+    background-color: whitesmoke;
 }

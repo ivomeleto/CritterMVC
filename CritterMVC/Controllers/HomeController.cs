@@ -41,7 +41,7 @@ namespace CritterMVC.Controllers
         {
             Thread.Sleep(1000);
             
-            return this.Content("Holy shit ");
+            return this.Content("<div>Holy shit </div>");
         }
 
         public ActionResult AjaxTest()
