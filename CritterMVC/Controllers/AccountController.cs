@@ -26,6 +26,8 @@ namespace CritterMVC.Controllers
             SignInManager = signInManager;
         }
 
+      
+
         public ApplicationSignInManager SignInManager
         {
             get

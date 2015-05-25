@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
 using Critter.Data;
 using System;
+using System.Linq;
 using System.Threading;
 
 namespace CritterMVC.Controllers
@@ -47,6 +48,20 @@ namespace CritterMVC.Controllers
         public ActionResult AjaxTest()
         {
             return this.View();
+        }
+
+        public ActionResult IsNameTaken(string username)
+        {
+            Thread.Sleep(1000);
+            var users = this.Data.Users.All().Where(x => x.UserName == username);
+            if (users.Count() == 0)
+            {
+                return Json(true);
+            }
+            else
+            {
+                return Json(false);
+            }
         }
     }
 }

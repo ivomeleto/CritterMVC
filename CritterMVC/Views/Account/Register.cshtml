@@ -13,8 +13,9 @@
     @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
         @Html.LabelFor(m => m.Username, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+        <div class="col-md-10" id="usernameLine">
+            @Html.TextBoxFor(m => m.Username, new { @class = "form-control", oninput="isNameTaken()", id="UserName" })
+            <div id="isNameTaken"></div>
         </div>
     </div>
     <div class="form-group">
@@ -41,6 +42,28 @@
         </div>
     </div>
 }
+
+<script>
+    $("#UserName").keyup(function () {
+        var name = $("#UserName").val(); //Value entered in the text box
+        var status = $("#isNameTaken"); //DIV object to display the status message
+        var user = $.trim(name);
+        if (user.length > 3) {
+            status.html("Checking....") //While our Thread works, we will show some message to indicate the progress
+            //jQuery AJAX Post request
+            $.post("/Home/IsNameTaken", { username: name },
+                        function (data) {
+                            if (data == true) {
+                                status.html("<font color=green>'<b>" + name + "</b>' is available!</font>");
+                            } else {
+                                status.html("<font color=red>'<b>" + name + "</b>' is not available!</font>");
+                            }
+                        });
+        } else {
+            status.html("Need more characters...");
+        }
+    });
+</script>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
