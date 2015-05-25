@@ -8,6 +8,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Critter.Models;
 using Critter.Data;
+using CritterMVC.ViewModels;
 
 namespace CritterMVC.Controllers
 {
@@ -226,6 +227,23 @@ namespace CritterMVC.Controllers
         {
             var user = this.UserProfile;
             user.AvatarUrl = model.AvatarUrl;
+            this.Data.Users.Update(user.Id, user);
+
+            return RedirectToAction("Index", "Users");
+        }
+
+
+        public ActionResult ChangeEmail()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ChangeEmail([Bind(Include = "Email")] UserViewModel model)
+        {
+            var user = this.UserProfile;
+            user.Email = model.Email;
             this.Data.Users.Update(user.Id, user);
 
             return RedirectToAction("Index", "Users");

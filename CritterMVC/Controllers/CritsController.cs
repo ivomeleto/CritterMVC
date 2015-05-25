@@ -19,22 +19,7 @@ namespace CritterMVC.Controllers
         {
             //TODO reverse crits order of appearance
             var crits = this.Data.Crit
-                .All().Select(x => new CritViewModel()
-                    {
-                        Id = x.CritId,
-                        Author = x.AuthorUser,
-                        Text = x.Text,
-                        CreatedAt = x.CreatedAt
-                    }
-                );
-
-
-            if (crits == null)
-            {
-                return this.HttpNotFound("User does not exist! For real!");
-            }
-
-            var critViewModel = crits.AsQueryable();
+                .All().Select(CritViewModel.ViewModel);
             return this.View(crits);
         }
 

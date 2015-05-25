@@ -292,6 +292,7 @@
     <Content Include="Views\Shared\DisplayTemplates\CritViewModel.cshtml" />
     <None Include="Views\Home\AjaxTest.cshtml" />
     <None Include="Views\Manage\ChangeAvatar.cshtml" />
+    <None Include="Views\Manage\ChangeEmail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

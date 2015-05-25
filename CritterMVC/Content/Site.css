@@ -37,6 +37,10 @@ ul {
     border-radius: 5px;
 }
 
+.profileAvatar {
+    border-radius: 5px;
+}
+
 .homeTitle {
     margin-left: 20%;
     margin-top: -10%;
