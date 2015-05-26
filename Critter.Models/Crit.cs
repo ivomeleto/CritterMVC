@@ -13,6 +13,7 @@ namespace Critter.Models
         public int CritId { get; set; }
 
         [Required]
+        [Display(Name = "Crit text")]
         public string Text { get; set; }
 
         public string AuthorUserId { get; set; }

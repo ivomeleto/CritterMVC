@@ -2,9 +2,10 @@
 @model  IQueryable<CritterMVC.ViewModels.CritViewModel>
 
 <br/><br/>
-<h2>All crits ever posted</h2>
+<h2>Latest Crits</h2>
 <hr />
 
+<strong>@Html.ActionLink("+Crit", "AddCrit", "Crits")</strong><br/><br />
 
 @foreach (var crit in @Model)
     {
@@ -14,7 +15,4 @@
             <strong>&nbsp;@crit.Text</strong>
             <p class="SentAt"><strong>Posted at: &nbsp;</strong>@crit.CreatedAt</p>
         </div>
-
     }
-
-<strong>@Html.ActionLink("+Crit", "AddCrit", "Crits")</strong>
