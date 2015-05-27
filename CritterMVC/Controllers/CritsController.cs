@@ -19,7 +19,7 @@ namespace CritterMVC.Controllers
         {
             //TODO reverse crits order of appearance
             var crits = this.Data.Crit
-                .All().Select(CritViewModel.ViewModel).OrderByDescending(x => x.CreatedAt).Take(5);
+                .All().Select(CritViewModel.ViewModel).OrderByDescending(x => x.CreatedAt).Take(7);
             return this.View(crits);
         }
 

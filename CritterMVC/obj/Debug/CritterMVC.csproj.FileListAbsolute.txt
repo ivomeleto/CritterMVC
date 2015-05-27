@@ -70,3 +70,7 @@ C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMV
 C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Ninject.Web.Common.xml
 C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Ninject.Web.Mvc.xml
 C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\System.Web.Mvc.Expressions.dll
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\CritterMVC\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
