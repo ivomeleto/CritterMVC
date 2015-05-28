@@ -63,5 +63,11 @@ namespace CritterMVC.Controllers
                 return Json(false);
             }
         }
+
+        [Authorize]
+        public ActionResult Chat()
+        {
+            return View(UserProfile);
+        }
     }
 }
