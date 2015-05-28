@@ -46,6 +46,13 @@ namespace CritterMVC.Controllers
             return RedirectToAction("Index", "Crits");
         }
 
+        public ActionResult PostAllCrits()
+        {
+            var crits = this.Data.Crit
+                .All().Select(CritViewModel.ViewModel).OrderByDescending(x => x.CreatedAt).Take(7);
+            return this.View(crits);
+        }
+
        
     }
 }

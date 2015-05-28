@@ -226,6 +226,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Hubs\CritsHub.cs" />
     <Compile Include="Hubs\TestHub.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="ViewModels\CritViewModel.cs" />
@@ -301,6 +302,7 @@
     <None Include="Views\Crits\AddCrit.cshtml" />
     <None Include="Views\Crits\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\CritViewModel.cshtml" />
+    <None Include="Views\Crits\PostAllCrits.cshtml" />
     <None Include="Views\Home\AjaxTest.cshtml" />
     <None Include="Views\Home\Chat.cshtml" />
     <None Include="Views\Manage\ChangeAvatar.cshtml" />

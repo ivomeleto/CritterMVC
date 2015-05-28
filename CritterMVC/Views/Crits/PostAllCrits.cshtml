@@ -1,0 +1,56 @@
+﻿@model  IQueryable<CritterMVC.ViewModels.CritViewModel>
+<script src="~/signalr/hubs"></script>
+
+<h2>Crits Live</h2>
+<br /><br />
+<hr />
+
+<strong>@Html.ActionLink("+Crit", "AddCrit", "Crits")</strong><br /><br />
+
+<div id="discussion"></div>
+
+
+
+    <script>
+        $(function ()
+        {
+
+            // Reference the auto-generated proxy for the hub.
+            var critsHubConnection = $.connection.critsHub;
+            critsHubConnection.client.postCritToPage = function (text) {
+                $('#discussion')
+                    .append('<p>' + htmlEncode(text) + '</p>');
+            };
+
+            $.connection.hub.start().done(function () {
+                // Call the Send method on the hub.
+                 @foreach (var crit in @Model)
+                {
+                     
+                   @:console.log('@crit.Text');
+                   @:critsHubConnection.server.postCrits('@crit.Text');
+                }
+            });
+        });
+        // This optional function html-encodes messages for display in the page.
+        function htmlEncode(value) {
+            var encodedValue = $('<div />').text(value).html();
+            return encodedValue;
+        }
+
+       
+    </script>
+
+        
+        @*<p class="SentAt"><strong>Posted at: &nbsp;</strong>@crit.CreatedAt</p>*@
+
+
+
+@*'<div class="crit">
+        ' +
+        '<a href="/Users/' + @crit.Author.UserName + '><img class="avatar" src=' + @crit.Author.AvatarUrl + ' alt="No avatar" width="50" /></a>'
+        + '<strong>&nbsp;' + @crit.Text + '</strong>' + '
+    </div>'
+
+        (crit.AuthorAvatar','@crit.Text', '@crit.CreatedAt');
+*@
