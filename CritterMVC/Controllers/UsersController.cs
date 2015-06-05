@@ -33,8 +33,7 @@ namespace CritterMVC.Controllers
 
 
             if (user == null)
-            {   
-                
+            {                   
                 return RedirectToAction("Index", "Home");
             }
 

@@ -22,12 +22,6 @@ namespace CritterMVC.Controllers
             this.Data = data;
         }
 
-        protected BaseController(ICritData data, User userProfile)
-            :this(data)
-        {
-            this.UserProfile = userProfile;
-        }
-
         protected ICritData Data { get; private set; }
         protected User UserProfile { get; private set; }
 

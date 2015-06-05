@@ -26,7 +26,6 @@
                 // Call the Send method on the hub.
                  @foreach (var crit in @Model)
                 {
-                     
                    @:console.log('@crit.Text');
                    @:critsHubConnection.server.postCrits('@crit.Text');
                 }

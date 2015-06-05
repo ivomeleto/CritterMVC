@@ -19,7 +19,8 @@ namespace CritterMVC.Controllers
         {
             //TODO reverse crits order of appearance
             var crits = this.Data.Crit
-                .All().Select(CritViewModel.ViewModel).OrderByDescending(x => x.CreatedAt).Take(7);
+                .All().Select(CritViewModel.ViewModel)
+                .OrderByDescending(x => x.CreatedAt).Take(7);
             return this.View(crits);
         }
 
@@ -43,13 +44,15 @@ namespace CritterMVC.Controllers
                 this.Data.Crit.Add(crit);
                 this.Data.Crit.SaveChanges();
             }
+
             return RedirectToAction("Index", "Crits");
         }
 
         public ActionResult PostAllCrits()
         {
             var crits = this.Data.Crit
-                .All().Select(CritViewModel.ViewModel).OrderByDescending(x => x.CreatedAt).Take(7);
+                .All().Select(CritViewModel.ViewModel)
+                .OrderByDescending(x => x.CreatedAt).Take(7);
             return this.View(crits);
         }
 

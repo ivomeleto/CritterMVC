@@ -214,22 +214,21 @@ namespace CritterMVC.Controllers
             return RedirectToAction("Index", new { Message = ManageMessageId.RemovePhoneSuccess });
         }
 
-        //
 
         public ActionResult ChangeAvatar()
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-
         public ActionResult ChangeAvatar([Bind(Include = "AvatarUrl")] User model)
         {
             var user = this.UserProfile;
             user.AvatarUrl = model.AvatarUrl;
-            this.Data.Users.Update(user.Id, user);
+            this.Data.Users.Update(user);
 
-            return RedirectToAction("Index", "Users");
+            return RedirectToAction("Index", "Users", new { username = user.UserName });
         }
 
 
@@ -244,16 +243,18 @@ namespace CritterMVC.Controllers
         {
             var user = this.UserProfile;
             user.Email = model.Email;
-            this.Data.Users.Update(user.Id, user);
+            this.Data.Users.Update(user);
 
-            return RedirectToAction("Index", "Users");
+            return RedirectToAction("Index", "Users", new{username = user.UserName});
         }
 
+        //
         // GET: /Manage/ChangePassword
         public ActionResult ChangePassword()
         {
             return View();
         }
+
         //
         // POST: /Manage/ChangePassword
         [HttpPost]

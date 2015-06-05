@@ -54,7 +54,7 @@ namespace CritterMVC.Controllers
         {
             Thread.Sleep(1000);
             var users = this.Data.Users.All().Where(x => x.UserName == username);
-            if (users.Count() == 0)
+            if (!users.Any())
             {
                 return Json(true);
             }

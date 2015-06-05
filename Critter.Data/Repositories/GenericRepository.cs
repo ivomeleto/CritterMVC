@@ -43,9 +43,15 @@ namespace Critter.Data.Repositories
             SaveChanges();
         }
 
-        public void Update(string id, T item)
+        public void Update(T item)
         {
-            var entity = this.GetById(id);
+            DbEntityEntry entry = this.dbContext.Entry(item);
+            if (entry.State == EntityState.Detached)
+            {
+                this.DbSet.Attach(item);
+            }
+
+            entry.State = EntityState.Modified;
             SaveChanges();
         }
 

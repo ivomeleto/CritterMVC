@@ -11,7 +11,7 @@ namespace Critter.Data.Repositories
         IQueryable<T> All();
         T GetById(object id);
         void Add(T item);
-        void Update(string id, T item);
+        void Update(T item);
         void Delete(T item);
         void DeleteById(object id);
         void SaveChanges();
