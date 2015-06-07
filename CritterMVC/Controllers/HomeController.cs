@@ -11,6 +11,7 @@ namespace CritterMVC.Controllers
         public HomeController(ICritData data)
             :base(data)
         {
+
         }
 
         public ActionResult Index()
@@ -63,10 +64,6 @@ namespace CritterMVC.Controllers
             }
         }
 
-        public ActionResult Chat()
-        {
-            return this.View();
-        }
 
         [Authorize]
         public ActionResult Chat()
