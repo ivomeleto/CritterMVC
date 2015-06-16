@@ -218,6 +218,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CritsController.cs" />
+    <Compile Include="Controllers\GroupsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NotificationsController.cs" />
@@ -303,6 +304,7 @@
     <None Include="Views\Crits\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\CritViewModel.cshtml" />
     <None Include="Views\Crits\PostAllCrits.cshtml" />
+    <None Include="Views\Groups\CreateGroup.cshtml" />
     <None Include="Views\Home\AjaxTest.cshtml" />
     <None Include="Views\Home\Chat.cshtml" />
     <None Include="Views\Manage\ChangeAvatar.cshtml" />

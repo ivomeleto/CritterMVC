@@ -12,6 +12,8 @@ namespace Critter.Data
     {
         IRepository<User> Users { get; }
         IRepository<Crit> Crit { get; }
+        IRepository<Group> Group { get; }
+
 
         int SaveChanges();
     }

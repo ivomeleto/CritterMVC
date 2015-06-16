@@ -30,14 +30,15 @@ namespace CritterMVC.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public ActionResult AddCrit([Bind(Include = "Text")] Crit crit)
         {
             crit.AuthorUser = this.UserProfile;
-            if (this.UserProfile == null)
-            {
-                return RedirectToAction("Login", "Account");
-            }
+            //if (this.UserProfile == null)
+            //{
+            //    return RedirectToAction("Login", "Account");
+            //}
             crit.CreatedAt = DateTime.Now;
             if (ModelState.IsValid)
             {

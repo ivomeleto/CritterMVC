@@ -25,5 +25,6 @@ namespace Critter.Data
         }
 
         public virtual IDbSet<Crit> Crits { get; set; }
+        public virtual IDbSet<Group> Groups { get; set; }
     }
 }

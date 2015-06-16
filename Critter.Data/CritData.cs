@@ -29,6 +29,11 @@ namespace Critter.Data
             get { return this.GetRepository<Crit>(); }
         }
 
+        public IRepository<Group> Group
+        {
+            get { return this.GetRepository<Group>(); }
+        }
+
         private IRepository<T> GetRepository<T>() where T: class
         {
             var type = typeof(T);

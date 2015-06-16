@@ -11,6 +11,7 @@ namespace Critter.Data
     public interface ICritterContext
     {
         IDbSet<Crit> Crits { get; set; }
+        IDbSet<Group> Groups { get; set; }
 
         int SaveChanges();
     }

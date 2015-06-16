@@ -15,9 +15,15 @@ namespace Critter.Models
         }
 
         [Key]
-        public string Id { get; set; }
+        public int GroupId { get; set; }
 
         public string Name { get; set; }
+
+        public string Description { get; set; }
+
+        public string AuthorUserId { get; set; }
+
+        public User AuthorUser { get; set; }
 
         public ICollection<User> Users { get; set; }
     }

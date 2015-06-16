@@ -65,7 +65,7 @@ namespace CritterMVC.Controllers
             user.AvatarUrl = model.AvatarUrl;
             this.Data.Users.Update(user);
 
-            return RedirectToAction("Index", "Users", new { username = user.UserName });
+            return RedirectToAction("Info", "Users", new { username = user.UserName });
         }
 
 
@@ -82,7 +82,7 @@ namespace CritterMVC.Controllers
             user.Email = model.Email;
             this.Data.Users.Update(user);
 
-            return RedirectToAction("Index", "Users", new{username = user.UserName});
+            return RedirectToAction("Info", "Users", new{username = user.UserName});
         }
 
         //
