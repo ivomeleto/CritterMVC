@@ -298,7 +298,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Users\Info.cshtml" />
     <None Include="Views\Crits\AddCrit.cshtml" />
     <None Include="Views\Crits\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\CritViewModel.cshtml" />
@@ -307,6 +307,7 @@
     <None Include="Views\Home\Chat.cshtml" />
     <None Include="Views\Manage\ChangeAvatar.cshtml" />
     <None Include="Views\Manage\ChangeEmail.cshtml" />
+    <None Include="Views\Users\SeeFriends.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

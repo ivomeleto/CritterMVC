@@ -1,0 +1,27 @@
+﻿@model CritterMVC.ViewModels.UserViewModel
+
+<h2> @Html.DisplayFor(x => x.UserName) </h2>
+
+@if (ViewBag.LoggedUser != Model.UserName)
+{
+    <h3> @Html.DisplayNameFor(x => x.Email): @Html.DisplayFor(x => x.Email) </h3>
+    <h4>@Html.ActionLink("Add friend", "AddFriend", "Users", new {username = @Model.UserName}, null)</h4>
+}
+else
+{
+    <p>@Html.ActionLink("Manage your account ", "Index", "Manage", new { username = @Model.UserName }, null)</p>
+    <p>@Html.ActionLink("See your friends ", "SeeFriends", "Users", new { username = @Model.UserName }, null)</p>
+}
+
+<hr/>
+<img src="@Model.AvatarUrl" alt="Sorry no image for you..." width="200" class="profileAvatar"/>
+<br /><br />
+<hr />
+    
+<h3>@Html.DisplayNameFor(x => x.PostedCrits): @Model.PostedCrits.Count()</h3>
+@Html.DisplayFor(x => x.PostedCrits)
+
+
+
+
+

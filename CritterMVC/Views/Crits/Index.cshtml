@@ -10,7 +10,12 @@
 @foreach (var crit in @Model)
     {
         <div class="crit">
-            <a href="/Users/@crit.Author.UserName"><img class="avatar" src="@crit.Author.AvatarUrl" alt="No avatar" width="50" /></a>
+
+            <a href="@Url.Action("Info", "Users", new { username = @crit.Author.UserName })">
+                <img src="@Url.Content(@crit.Author.AvatarUrl)" alt="No avatar" width="50" img class="avatar" />
+            </a>
+
+            @*<a href="/Users/Info/@crit.Author.UserName"><img class="avatar" src="@crit.Author.AvatarUrl" alt="No avatar" width="50"/></a>*@
 
             <strong>&nbsp;@crit.Text</strong>
             <p class="SentAt"><strong>Posted at: &nbsp;</strong>@crit.CreatedAt</p>

@@ -52,6 +52,38 @@ namespace CritterMVC.Controllers
                 _userManager = value;
             }
         }
+        public ActionResult ChangeAvatar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ChangeAvatar([Bind(Include = "AvatarUrl")] User model)
+        {
+            var user = this.UserProfile;
+            user.AvatarUrl = model.AvatarUrl;
+            this.Data.Users.Update(user);
+
+            return RedirectToAction("Index", "Users", new { username = user.UserName });
+        }
+
+
+        public ActionResult ChangeEmail()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ChangeEmail([Bind(Include = "Email")] UserViewModel model)
+        {
+            var user = this.UserProfile;
+            user.Email = model.Email;
+            this.Data.Users.Update(user);
+
+            return RedirectToAction("Index", "Users", new{username = user.UserName});
+        }
 
         //
         // GET: /Manage/Index
@@ -215,38 +247,6 @@ namespace CritterMVC.Controllers
         }
 
 
-        public ActionResult ChangeAvatar()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult ChangeAvatar([Bind(Include = "AvatarUrl")] User model)
-        {
-            var user = this.UserProfile;
-            user.AvatarUrl = model.AvatarUrl;
-            this.Data.Users.Update(user);
-
-            return RedirectToAction("Index", "Users", new { username = user.UserName });
-        }
-
-
-        public ActionResult ChangeEmail()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult ChangeEmail([Bind(Include = "Email")] UserViewModel model)
-        {
-            var user = this.UserProfile;
-            user.Email = model.Email;
-            this.Data.Users.Update(user);
-
-            return RedirectToAction("Index", "Users", new{username = user.UserName});
-        }
 
         //
         // GET: /Manage/ChangePassword

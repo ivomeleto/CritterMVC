@@ -8,11 +8,12 @@ namespace CritterMVC
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapMvcAttributeRoutes(); 
 
             routes.MapRoute(
                 name: "Usesr",
-                url: "Users/{username}",
-                defaults: new { controller = "Users", action = "Index" }
+                url: "Users/{action}/{username}",
+                defaults: new { controller = "Users", action = "Info", username = UrlParameter.Optional }
             );
 
             routes.MapRoute(
@@ -20,6 +21,7 @@ namespace CritterMVC
                  url: "{controller}/{action}/{id}",
                  defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
              );
+
         }
     }
 }

@@ -33,7 +33,8 @@ namespace Critter.Models
             get { return this._postedCrits; }
             set { this._postedCrits = value; }
         }
-
+        public virtual ICollection<Group> Groups { get; set; }
+        public virtual ICollection<User> Friends { get; set; }
         public string Bio { get; set; }
         public string FullName { get; set; }
         public string AvatarUrl { get; set; }
