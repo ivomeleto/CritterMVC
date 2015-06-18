@@ -33,6 +33,6 @@ C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMV
 C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\Critter.Models\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\Critter.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\Critter.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\Critter.Models\obj\Debug\Critter.Models.csprojResolveAssemblyReference.cache
 C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\Critter.Models\obj\Debug\Critter.Models.dll
 C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\Critter.Models\obj\Debug\Critter.Models.pdb
+C:\Users\iivel_000.COMMANDCENTER\Documents\Visual Studio 2013\Projects\CritterMVC\Critter.Models\obj\Debug\Critter.Models.csprojResolveAssemblyReference.cache

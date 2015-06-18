@@ -1,0 +1,14 @@
+﻿@model IQueryable<CritterMVC.ViewModels.GroupViewModel>
+<br/>
+<h3>Groups list</h3>
+@Html.ActionLink("+Group", "CreateGroup", "Groups")
+
+
+@foreach (var group in @Model)
+{
+    <div class="group">
+        <hr/>
+        <h5>@group.Name</h5>
+        @Html.ActionLink("Details", "GroupDetails", "Groups", new{ id = group.Id }, null)
+    </div>
+}

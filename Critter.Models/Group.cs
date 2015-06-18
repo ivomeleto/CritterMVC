@@ -9,9 +9,11 @@ namespace Critter.Models
 {
     public class Group
     {
+        private ICollection<User> _users;
+
         public Group()
         {
-            this.Users = new HashSet<User>();
+            this._users = new HashSet<User>();
         }
 
         [Key]
@@ -25,6 +27,6 @@ namespace Critter.Models
 
         public User AuthorUser { get; set; }
 
-        public ICollection<User> Users { get; set; }
+        public virtual ICollection<User> Users { get; set; }
     }
 }

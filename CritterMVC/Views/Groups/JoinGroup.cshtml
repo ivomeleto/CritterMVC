@@ -1,0 +1,9 @@
+﻿@model Critter.Models.Group
+
+@Model.Name
+@Model.Users.Count
+<p>user: @Model.Users.FirstOrDefault().UserName;</p>
+@*@foreach (var user in Model.Users)
+{
+    <p>@user.UserName</p>
+}*@

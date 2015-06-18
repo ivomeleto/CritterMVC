@@ -13,6 +13,7 @@ namespace CritterMVC.ViewModels
     {
        
         public string Id { get; set; }
+        [Display(Name = "All crits you ever posted")]
         public IEnumerable<CritViewModel> PostedCrits { get; set; }
         public IEnumerable<CritViewModel> ReceivedCrits { get; set; }
         public string Bio { get; set; }

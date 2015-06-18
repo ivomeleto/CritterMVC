@@ -1,0 +1,41 @@
+﻿@using System.Management.Instrumentation
+@model CritterMVC.ViewModels.GroupViewModel
+
+<br/>
+@if (@Model == null)
+{
+    throw new InstanceNotFoundException();
+}
+<h3>Details for @Model.Name</h3>
+<h5>@Model.Description</h5>
+<br />
+@if (Model.Users.All(x => x.UserName != ViewBag.CurrentUser))
+{
+    @Html.ActionLink("Join group", "JoinGroup", "Groups", new {id = Model.Id}, null)
+}
+else
+{
+    <p>You are a member of <strong>@Model.Name</strong></p>
+}
+
+<br /><br/>
+<hr />
+<h5>Members: </h5>
+@if (Model.Users.Count == 0)
+{
+    <p style="color: grey">No members yet. <strong>Be the first to join!</strong></p>
+}
+@foreach (var user in Model.Users)
+{
+    <div style="width: 100px">
+        <a href="@Url.Action("Info", "Users", new { username = @user.UserName })">
+            <img src="@user.AvatarUrl" alt="No avatar" width="100" img class="avatar" />
+            <p>@user.UserName</p>
+        </a>
+    </div>
+}
+<br/>
+<hr />
+<div>
+    @Html.ActionLink("Back to group-list", "Index")
+</div>
