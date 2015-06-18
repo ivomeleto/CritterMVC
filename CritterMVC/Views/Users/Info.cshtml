@@ -5,12 +5,12 @@
 @if (ViewBag.LoggedUser != Model.UserName)
 {
     <h3> @Html.DisplayNameFor(x => x.Email): @Html.DisplayFor(x => x.Email) </h3>
-    <h4>@Html.ActionLink("Add friend", "AddFriend", "Users", new {username = @Model.UserName}, null)</h4>
+    <h4>@Html.ActionLink("Follow", "Follow", "Users", new {username = @Model.UserName}, null)</h4>
 }
 else
 {
     <p>@Html.ActionLink("Manage your account ", "Index", "Manage", new { username = @Model.UserName }, null)</p>
-    <p>@Html.ActionLink("See your friends ", "SeeFriends", "Users", new { username = @Model.UserName }, null)</p>
+    <p>@Html.ActionLink("See who are you following ", "Following", "Users", new { username = @Model.UserName }, null)</p>
 }
 
 <hr/>

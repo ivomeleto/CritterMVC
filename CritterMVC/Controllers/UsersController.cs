@@ -47,8 +47,8 @@ namespace CritterMVC.Controllers
             
             return this.View(userViewModel);          
         }
-        [Route("users/addfriend/{friendName}")]
-        public ActionResult AddFriend(string friendName)
+        [Route("users/follow/{friendName}")]
+        public ActionResult Follow(string friendName)
         {
             var currentUser = this.UserProfile;
             var friend = this.Data
@@ -70,11 +70,11 @@ namespace CritterMVC.Controllers
 
             //throw new InstanceNotFoundException(currentUser.Friends.Count.ToString());
 
-            return RedirectToAction("SeeFriends", "Users", new {id = currentUser.UserName});
+            return RedirectToAction("Following", "Users", new {id = currentUser.UserName});
         }
 
-        [Route("users/removefriend/{friendName}")]
-        public ActionResult RemoveFriend(string friendName)
+        [Route("users/unfollow/{friendName}")]
+        public ActionResult Unfollow(string friendName)
         {
             var currentUser = this.UserProfile;
             var friend = this.Data
@@ -93,11 +93,11 @@ namespace CritterMVC.Controllers
 
             //throw new InstanceNotFoundException(currentUser.Friends.Count.ToString());
 
-            return RedirectToAction("SeeFriends", "Users", new { id = currentUser.UserName });
+            return RedirectToAction("Following", "Users", new { id = currentUser.UserName });
         }
 
-        [Route("users/seefriends/{friendName}")]
-        public ActionResult SeeFriends(string username)
+        [Route("users/following/{friendName}")]
+        public ActionResult Following(string username)
         {
             var currentUser = this.UserProfile;
             return this.View(currentUser.Friends);

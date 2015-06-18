@@ -8,14 +8,13 @@
 }
 <h3>Details for @Model.Name</h3>
 <h5>@Model.Description</h5>
-<br />
 @if (Model.Users.All(x => x.UserName != ViewBag.CurrentUser))
 {
-    @Html.ActionLink("Join group", "JoinGroup", "Groups", new {id = Model.Id}, null)
+    @Html.ActionLink("+Join", "JoinGroup", "Groups", new {id = Model.Id}, null)
 }
 else
 {
-    <p>You are a member of <strong>@Model.Name</strong></p>
+    @Html.ActionLink("-Leave", "LeaveGroup", "Groups", new { id = Model.Id }, null)
 }
 
 <br /><br/>

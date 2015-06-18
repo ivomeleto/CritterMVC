@@ -68,13 +68,40 @@ namespace CritterMVC.Controllers
             var groups = this.Data.Group.All();
             var group = groups
                 .FirstOrDefault(x => x.GroupId == id);
-            //group.Users.Add(currentUser);
-            //this.Data.Group.Update(group);
-            //this.Data.Group.SaveChanges();
-            //return this.View(group);
+
             try
             {
                 group.Users.Add(currentUser);
+            }
+            catch (NullReferenceException exception)
+            {
+                throw new InstanceNotFoundException(exception.ToString());
+            }
+
+            this.Data.Group.Update(group);
+            this.Data.Group.SaveChanges();
+
+            var groupViewModel = groups
+                .Select(GroupViewModel.ViewModel)
+                .FirstOrDefault(x => x.Id == id);
+
+            ViewBag.CurrentUser = currentUser.UserName;
+
+            return this.View("GroupDetails", groupViewModel);
+        }
+
+        [Authorize]
+        public ActionResult LeaveGroup(int? id)
+        {
+
+            var currentUser = this.UserProfile;
+            var groups = this.Data.Group.All();
+            var group = groups
+                .FirstOrDefault(x => x.GroupId == id);
+
+            try
+            {
+                group.Users.Remove(currentUser);
             }
             catch (NullReferenceException exception)
             {
