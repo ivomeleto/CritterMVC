@@ -8,7 +8,6 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -35,6 +34,8 @@ ul {
 }
 
 .avatar {
+    position: relative;
+    vertical-align: middle;
     border: solid 0px lightgray;
     border-radius: 5px;
 }
@@ -76,7 +77,8 @@ ul {
 
 .jumbotron {
     margin: auto;
-    width: 60%;
+    margin-top: 50px;
+    width: 70%;
     background-color: whitesmoke;
 }
 
@@ -89,15 +91,19 @@ ul {
      background-color: #f0efbf;
      border-radius: 8px;
      box-shadow: 1px 1px 8px #888888;
+    margin-top: 15px;
      /*border-bottom: 1px solid lightgray;*/
 }
 
 .crit:hover {
     background-color: whitesmoke;
-     box-shadow: 3px 3px 13px #888888;
+    box-shadow: 3px 3px 13px #888888;
 }
 
 
-#isNameTaken {
-    
+.critText {
+    margin-left: 70px;
+    position: relative;
+    bottom: -35px;
+    padding: 5px
 }

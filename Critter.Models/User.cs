@@ -26,7 +26,7 @@ namespace Critter.Models
         public User()
         {
             this.PostedCrits = new HashSet<Crit>();
-            this.Friends = new HashSet<User>();
+            this.Following = new HashSet<User>();
         }
         [InverseProperty("AuthorUser")]
         public virtual ICollection<Crit> PostedCrits
@@ -36,7 +36,7 @@ namespace Critter.Models
         }
         [InverseProperty("Users")]
         public virtual ICollection<Group> Groups { get; set; }
-        public virtual ICollection<User> Friends { get; set; }
+        public virtual ICollection<User> Following { get; set; }
         public string Bio { get; set; }
         public string FullName { get; set; }
         public string AvatarUrl { get; set; }

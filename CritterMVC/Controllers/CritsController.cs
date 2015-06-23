@@ -35,6 +35,7 @@ namespace CritterMVC.Controllers
         public ActionResult AddCrit([Bind(Include = "Text")] Crit crit)
         {
             crit.AuthorUser = this.UserProfile;
+     
             //if (this.UserProfile == null)
             //{
             //    return RedirectToAction("Login", "Account");

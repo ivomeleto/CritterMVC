@@ -154,7 +154,9 @@ namespace CritterMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new User { UserName = model.Username, Email = model.Email };
+                var defaultAvatarUrl =
+                    "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTGygS6TABdDxutW15o_TfNz2jDXUTAAxPZYaMMoTs-0VbDNrb0";
+                var user = new User { UserName = model.Username, Email = model.Email, AvatarUrl = defaultAvatarUrl };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

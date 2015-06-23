@@ -47,6 +47,7 @@ namespace CritterMVC.Controllers
             
             return this.View(userViewModel);          
         }
+
         [Route("users/follow/{friendName}")]
         public ActionResult Follow(string friendName)
         {
@@ -62,9 +63,9 @@ namespace CritterMVC.Controllers
                     "Sorry "+currentUser.UserName+", your friend "+friendName+" was not found!");
             }
 
-            if (!currentUser.Friends.Any(x => x.UserName == friendName))
+            if (!currentUser.Following.Any(x => x.UserName == friendName))
             {
-                currentUser.Friends.Add(friend);
+                currentUser.Following.Add(friend);
                 this.Data.Users.Update(currentUser);
             }
 
@@ -88,7 +89,7 @@ namespace CritterMVC.Controllers
                     "Sorry " + currentUser.UserName + ", your friend " + friendName + " was not found!");
             }
 
-            currentUser.Friends.Remove(friend);
+            currentUser.Following.Remove(friend);
             this.Data.Users.Update(currentUser);
 
             //throw new InstanceNotFoundException(currentUser.Friends.Count.ToString());
@@ -100,7 +101,7 @@ namespace CritterMVC.Controllers
         public ActionResult Following(string username)
         {
             var currentUser = this.UserProfile;
-            return this.View(currentUser.Friends);
+            return this.View(currentUser.Following);
         }
 
      
