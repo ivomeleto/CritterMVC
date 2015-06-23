@@ -12,6 +12,7 @@ namespace Critter.Data
     {
         IDbSet<Crit> Crits { get; set; }
         IDbSet<Group> Groups { get; set; }
+        IDbSet<Vote> Votes { get; set; }
 
         int SaveChanges();
     }

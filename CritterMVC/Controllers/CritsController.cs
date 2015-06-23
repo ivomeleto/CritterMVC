@@ -35,12 +35,8 @@ namespace CritterMVC.Controllers
         public ActionResult AddCrit([Bind(Include = "Text")] Crit crit)
         {
             crit.AuthorUser = this.UserProfile;
-     
-            //if (this.UserProfile == null)
-            //{
-            //    return RedirectToAction("Login", "Account");
-            //}
             crit.CreatedAt = DateTime.Now;
+
             if (ModelState.IsValid)
             {
                 this.Data.Crit.Add(crit);
@@ -49,6 +45,18 @@ namespace CritterMVC.Controllers
 
             return RedirectToAction("Index", "Crits");
         }
+
+        //public ActionResult AddVote(Crit crit)
+        //{
+        //    crit.Votes.Add(new Vote()
+        //    {
+        //        User = this.UserProfile
+        //    });
+        //    this.Data.Crit.Update(crit);
+        //    this.Data.SaveChanges();
+
+        //    return this.Content(crit.Votes.Count.ToString());
+        //}
 
         public ActionResult PostAllCrits()
         {

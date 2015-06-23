@@ -68,6 +68,10 @@ namespace Critter.Data.Migrations
                     AuthorUser = userToInsert1,
                     Text = "I better check that...",
                     CreatedAt = DateTime.Now,
+                    Votes = new List<Vote>(){ new Vote()
+                    {
+                        User = userToInsert
+                    }}
                 });
                 context.Groups.Add(new Group()
                 {

@@ -9,6 +9,12 @@ namespace Critter.Models
 {
     public class Crit
     {
+
+        public Crit()
+        {
+            this.Votes = new List<Vote>();
+        }
+
         [Key]
         public int CritId { get; set; }
 
@@ -21,5 +27,7 @@ namespace Critter.Models
         public User AuthorUser { get; set; }
 
         public DateTime CreatedAt { get; set; }
+
+        public virtual ICollection<Vote> Votes { get; set; }
     }
 }

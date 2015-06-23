@@ -37,6 +37,7 @@ namespace Critter.Models
         [InverseProperty("Users")]
         public virtual ICollection<Group> Groups { get; set; }
         public virtual ICollection<User> Following { get; set; }
+        public virtual ICollection<Vote> Votes { get; set; }
         public string Bio { get; set; }
         public string FullName { get; set; }
         public string AvatarUrl { get; set; }

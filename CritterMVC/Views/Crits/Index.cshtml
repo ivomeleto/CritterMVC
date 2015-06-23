@@ -11,14 +11,21 @@
     {
         <div class="crit">
             <div class="critText">
-                <strong>&nbsp;@crit.Text</strong>
+                <h4>&nbsp;@crit.Text</h4>
             </div>
             <div>
                 <a href="@Url.Action("Info", "Users", new {username = @crit.Author.UserName})">
                     &nbsp;<img src="@Url.Content(@crit.Author.AvatarUrl)" alt="No avatar" width="50" img class="avatar"/>
                 </a><br/>
-                <strong style="color: ThreeDLightShadow">&nbsp;&nbsp;@crit.Author.UserName &nbsp;</strong>
-                <p class="SentAt">&nbsp;Posted at: &nbsp;@crit.CreatedAt</p>
+                <strong style="color: ThreeDLightShadow">
+                    &nbsp;&nbsp;@crit.Author.UserName&nbsp;
+                </strong>
+                <p class="SentAt">
+                    &nbsp;Posted at: @crit.CreatedAt
+                    <strong style="float: right; position: relative; right: 10px;">
+                        Votes count: @crit.VotesCount
+                    </strong>
+                </p>
             </div>
         </div>
     }
