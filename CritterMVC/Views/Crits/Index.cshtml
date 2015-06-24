@@ -22,10 +22,35 @@
                 </strong>
                 <p class="SentAt">
                     &nbsp;Posted at: @crit.CreatedAt
-                    <strong style="float: right; position: relative; right: 10px;">
-                        Votes count: @crit.VotesCount
-                    </strong>
+                    <strong style="float: right; position: relative; right: 10px;"></strong>
+                    <img
+                        id="button"
+                        onclick="AddVote(@crit.Id)"
+                        src="https://cdn1.iconfinder.com/data/icons/significon/512/Significon-Like-128.png"
+                        width="20"
+                        class="likeBtn"
+                    />
+
+                    <div id="@crit.Id">
+                       Likes: @crit.VotesCount
+                    </div>
                 </p>
             </div>
         </div>
     }
+
+<script>
+    function AddVote(critId) {
+       var id = critId; 
+            //jQuery AJAX Post request
+            $.post("/Home/AddVote/"+id,
+                function (data) {
+                    console.log(id);
+                    $("#"+id).html("Likes: " + data);
+                });
+    };
+</script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -108,3 +108,13 @@ ul {
     padding: 5px;
     margin-right: 30px;
 }
+
+.likeBtn {
+    float: right; 
+    margin-right: 20px; 
+    margin-top: 20px   
+}
+
+.likeBtn:hover {
+    width: 23px;
+}

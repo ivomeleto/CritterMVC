@@ -2,7 +2,9 @@
 using Critter.Data;
 using System;
 using System.Linq;
+using System.Management.Instrumentation;
 using System.Threading;
+using Critter.Models;
 
 namespace CritterMVC.Controllers
 {
@@ -64,6 +66,26 @@ namespace CritterMVC.Controllers
             }
         }
 
+        [Route("home/AddVote/{critId}")]
+        public ActionResult AddVote(int critId)
+        {
+            var currentCrit = this.Data.Crit.All().FirstOrDefault(x => x.CritId == critId);
+            if (currentCrit == null)
+            {
+                throw new InstanceNotFoundException("Crit with Id "+critId+" was not found!");
+            }
+            if (!currentCrit.Votes.Any(x => x.User.Id == this.UserProfile.Id))
+            {
+                currentCrit.Votes.Add(new Vote()
+                {
+                    User = this.UserProfile
+                });
+                this.Data.Crit.Update(currentCrit);
+                this.Data.SaveChanges();
+            }
+            var votesCount = currentCrit.Votes.Count;
+            return Json(votesCount, JsonRequestBehavior.AllowGet);
+        }
 
         [Authorize]
         public ActionResult Chat()

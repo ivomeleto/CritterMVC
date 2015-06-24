@@ -49,7 +49,7 @@
         var status = $("#isNameTaken"); //DIV object to display the status message
         var user = $.trim(name);
         if (user.length > 3) {
-            status.html("Checking....") //While our Thread works, we will show some message to indicate the progress
+            status.html("Checking...."); //While our Thread works, we will show some message to indicate the progress
             //jQuery AJAX Post request
             $.post("/Home/IsNameTaken", { username: name },
                         function (data) {
