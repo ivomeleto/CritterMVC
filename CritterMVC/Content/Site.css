@@ -2,6 +2,16 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background-color: antiquewhite;
+    font-family: "Palatino Linotype";
+    font-size: 13px;
+}
+
+h2,h3,h4,h5 {
+    font-family: "Palatino Linotype";
+    
+}
+h1 {
+    font-family: "Palatino Linotype";
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -18,10 +28,10 @@
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
+
 textarea {
-    max-width: 280px;
+    width: 380px;
+    height: 100px
 }
 
 footer {
@@ -34,8 +44,9 @@ ul {
 }
 
 .avatar {
+    width: 60px;
     position: relative;
-    vertical-align: middle;
+    top: inherit;
     border: solid 0px lightgray;
     border-radius: 5px;
 }
@@ -44,6 +55,10 @@ ul {
 
     box-shadow: 3px 3px 10px #888888;
     border-radius: 5px;
+}
+
+.critUserName {
+    color: ThreeDLightShadow
 }
 
 .profileAvatar {
@@ -91,7 +106,7 @@ ul {
      background-color: #f0efbf;
      border-radius: 8px;
      box-shadow: 1px 1px 8px #888888;
-    margin-top: 15px;
+     margin-top: 15px;
      /*border-bottom: 1px solid lightgray;*/
 }
 
@@ -102,11 +117,11 @@ ul {
 
 
 .critText {
-    margin-left: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+    top: 50px;
     position: relative;
-    bottom: -35px;
-    padding: 5px;
-    margin-right: 30px;
+    text-align: center;
 }
 
 .likeBtn {
@@ -117,4 +132,8 @@ ul {
 
 .likeBtn:hover {
     width: 23px;
+}
+
+.shit {
+    line-height: 0px;
 }

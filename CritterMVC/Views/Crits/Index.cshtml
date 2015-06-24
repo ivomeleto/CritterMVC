@@ -10,14 +10,11 @@
 @foreach (var crit in @Model)
     {
         <div class="crit">
-            <div class="critText">
-                <h4>&nbsp;@crit.Text</h4>
-            </div>
-            <div>
-                <a href="@Url.Action("Info", "Users", new {username = @crit.Author.UserName})">
+                <h4 class="critText">&nbsp;@crit.Text</h4>
+                <a class="shit" href="@Url.Action("Info", "Users", new {username = @crit.Author.UserName})">
                     &nbsp;<img src="@Url.Content(@crit.Author.AvatarUrl)" alt="No avatar" width="50" img class="avatar"/>
                 </a><br/>
-                <strong style="color: ThreeDLightShadow">
+                <strong class="critUserName">
                     &nbsp;&nbsp;@crit.Author.UserName&nbsp;
                 </strong>
                 <p class="SentAt">
@@ -32,10 +29,9 @@
                     />
 
                     <div id="@crit.Id">
-                       Likes: @crit.VotesCount
+                        &nbsp;&nbsp;Likes: @crit.VotesCount
                     </div>
                 </p>
-            </div>
         </div>
     }
 
@@ -46,7 +42,7 @@
             $.post("/Home/AddVote/"+id,
                 function (data) {
                     console.log(id);
-                    $("#"+id).html("Likes: " + data);
+                    $("#" + id).html("&nbsp;&nbsp;Likes: " + data);
                 });
     };
 </script>
